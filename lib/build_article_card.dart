@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/SizeConfig.dart';
 import 'package:news_app/article_webview.dart';
@@ -58,7 +59,7 @@ class BuildArticleCard extends StatelessWidget {
             Text(
               articleData['description'] ?? '',
               style: TextStyle(
-                fontSize: 2.5 * SizeConfig.textMultiplier,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -68,7 +69,7 @@ class BuildArticleCard extends StatelessWidget {
             Text(
               articleData['title'] ?? '',
               style: TextStyle(
-                fontSize: 2.0 * SizeConfig.textMultiplier,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -78,13 +79,13 @@ class BuildArticleCard extends StatelessWidget {
             Text(
               'Time: ${publishedAt.substring(11, 16)}' ?? '',
               style: TextStyle(
-                fontSize: 2.0 * SizeConfig.textMultiplier,
+                fontSize: 20,
               ),
             ),
             Text(
               'Date: ${publishedAt.substring(0, 10)}' ?? '',
               style: TextStyle(
-                fontSize: 2.0 * SizeConfig.textMultiplier,
+                fontSize: 20,
               ),
             ),
           ],

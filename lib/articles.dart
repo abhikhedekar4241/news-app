@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:async_loader/async_loader.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:news_app/build_article_card.dart';
@@ -14,11 +15,11 @@ class Articles extends StatelessWidget {
       new GlobalKey<AsyncLoaderState>();
 
   loadData() async {
-    final String apiKey = '03bd95954ad4479daccdc94c64bf1134';
-    final String url =
+    final String apiKey = 'YOUR_API_KEY';
+    String url =
         'https://newsapi.org/v2/top-headlines?sources=$source&apiKey=$apiKey';
-    http.Response response = await http.get(url).catchError((e) => print(e));
 
+    http.Response response = await http.get(url).catchError((e) => print(e));
     // News JSON response conversion and handling for null response, same for List data
     Map dataMap = jsonDecode(response.body) ?? {};
     List data = dataMap['articles'] ?? [];

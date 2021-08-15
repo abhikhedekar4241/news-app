@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             SizeConfig().init(constraints, orientation);
             return MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'HomeScreen App',
+              title: 'News App',
               home: Scaffold(
                 // Home widget contains all tabs
                 body: Home(),
